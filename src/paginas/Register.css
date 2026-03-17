@@ -1,0 +1,69 @@
+.register-screen {
+  background-image: url("https://images.unsplash.com/photo-1495521821757-a1efb6729352?q=80&w=2000");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.register-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 50px;
+  border-radius: 40px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.register-card h1 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-salmon {
+  background-color: #ffe5d1;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+.btn-principal {
+  background-color: #ff9f1c;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-error {
+  color: #d62828;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .register-card {
+    padding: 30px 24px;
+    border-radius: 24px;
+  }
+
+  .register-card h1 {
+    font-size: 28px;
+  }
+}

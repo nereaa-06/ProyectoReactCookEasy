@@ -1,0 +1,89 @@
+.perfil-screen {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1505935428862-770b6f24f629?q=80&w=2000");
+  background-size: cover;
+}
+
+.perfil-container {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 50px;
+  gap: 30px;
+  width: 700px;
+  align-items: center;
+}
+
+.perfil-avatar-card {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex: 1;
+}
+
+.circulo-avatar-grande {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #333;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+}
+
+.perfil-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 2;
+}
+
+.input-salmon {
+  background-color: #ffe5d1;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+}
+
+.btn-principal {
+  background-color: #ff9f1c;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-principal:hover {
+  background-color: #e68a00;
+  transform: translateY(-2px);
+}
+
+.btn-perfil {
+  padding: 12px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.input-oculto {
+  display: none;
+}
+
+.foto-perfil {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}

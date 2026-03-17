@@ -1,0 +1,61 @@
+.login-screen {
+  background-image: url("https://images.unsplash.com/photo-1495521821757-a1efb6729352?q=80&w=2000");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 50px;
+  border-radius: 40px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.login-card h1 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-salmon {
+  background-color: #FFE5D1;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+.btn-principal {
+  background-color: #FF9F1C;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.toggle-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.link-azul {
+  color: #007BFF;
+  cursor: pointer;
+  text-decoration: underline;
+}

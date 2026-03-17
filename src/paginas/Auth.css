@@ -1,0 +1,94 @@
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2000');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(5px); 
+}
+
+
+.auth-titulo {
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.auth-subtitulo {
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.input-group input {
+  padding: 12px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #FF9F1C;
+}
+
+.btn-auth-principal {
+  width: 100%;
+  padding: 14px;
+  background-color: #FF9F1C;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+  margin-top: 10px;
+}
+
+.btn-auth-principal:hover {
+  background-color: #e68a00;
+  transform: translateY(-2px);
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-footer a {
+  color: #FF9F1C;
+  text-decoration: none;
+  font-weight: 600;
+}

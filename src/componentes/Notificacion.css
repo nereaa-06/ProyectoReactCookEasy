@@ -1,0 +1,48 @@
+.overlay-notificacion {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.caja-notificacion {
+  width: 90%;
+  max-width: 420px;
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.caja-notificacion h3 {
+  margin: 0 0 12px;
+  color: #1f1f1f;
+  font-size: 26px;
+}
+
+.caja-notificacion p {
+  margin: 0 0 22px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.boton-notificacion {
+  background-color: #ff9f1c;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.boton-notificacion:hover {
+  background-color: #e68a00;
+  transform: translateY(-2px);
+}

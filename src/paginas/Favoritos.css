@@ -1,0 +1,81 @@
+.favoritos-screen {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #faf5f1 0%, #f5ede6 100%);
+  padding: 20px;
+}
+
+.favoritos-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.favoritos-container h1 {
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.sin-favoritos {
+  text-align: center;
+  color: #999;
+  padding: 40px;
+  font-size: 16px;
+}
+
+.favoritos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta-favorito {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.tarjeta-favorito:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.imagen-favorito {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info-favorito {
+  padding: 15px;
+}
+
+.info-favorito h2 {
+  color: #333;
+  font-size: 16px;
+  margin: 0 0 8px 0;
+}
+
+.info-favorito .autor {
+  color: #999;
+  font-size: 13px;
+  margin: 0 0 15px 0;
+}
+
+.btn-quitar {
+  background: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.btn-quitar:hover {
+  background: #c9423f;
+}
