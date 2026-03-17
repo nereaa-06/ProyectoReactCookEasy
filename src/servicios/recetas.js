@@ -3,6 +3,7 @@ import { recetasIniciales } from './datos';
 
 let sembrando = false;
 
+// Convierte ingredientes a una lista limpia de texto.
 const pasarALista = (ingredientes) => {
   if (Array.isArray(ingredientes)) {
     return ingredientes.map((item) => String(item).trim()).filter(Boolean);
@@ -42,6 +43,7 @@ const aRecetaUI = (fila) => ({
   autor: 'Usuario'
 });
 
+// Devuelve el usuario actual desde Supabase.
 const obtenerUsuario = async () => {
   const { data } = await supabase.auth.getUser();
   return data?.user || null;
@@ -52,6 +54,7 @@ const sacarNombreAutor = (usuario) => {
 };
 
 const ponerAutores = async (listaRecetas) => {
+  // Busca el nombre de cada autor para mostrarlo en tarjetas.
   const ids = [...new Set(listaRecetas.map((receta) => receta.userId))];
   if (ids.length === 0) return listaRecetas;
 
@@ -89,6 +92,7 @@ const crearRecetasEjemplo = async (idUsuario) => {
 
 export const RecetasService = {
   listar: async () => {
+    // Trae recetas; si no hay, crea algunas de ejemplo.
     const usuario = await obtenerUsuario();
     if (!usuario) {
       return { ok: false, msg: 'Sesion no valida' };
@@ -154,6 +158,7 @@ export const RecetasService = {
   },
 
   crear: async ({ nombre, imagen, ingredientes, instrucciones }) => {
+    // Inserta una receta nueva del usuario actual.
     const usuario = await obtenerUsuario();
     if (!usuario) {
       return { ok: false, msg: 'Sesion no valida' };
@@ -193,6 +198,7 @@ export const RecetasService = {
   },
 
   eliminar: async (id) => {
+    // Elimina favoritos ligados y luego la receta.
     const usuario = await obtenerUsuario();
     if (!usuario) {
       return { ok: false, msg: 'Sesion no valida' };
@@ -257,6 +263,7 @@ export const RecetasService = {
   },
 
   actualizarFavorito: async (recetaId, esFavorito) => {
+    // Marca o desmarca favorito segun el estado recibido.
     const usuario = await obtenerUsuario();
     if (!usuario) {
       return { ok: false, msg: 'Sesion no valida' };

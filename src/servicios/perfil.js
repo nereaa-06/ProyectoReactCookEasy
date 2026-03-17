@@ -1,5 +1,6 @@
 import { supabase } from './supabaseClient';
 
+// Devuelve el usuario logueado.
 const obtenerUsuario = async () => {
   const { data } = await supabase.auth.getUser();
   return data?.user || null;
@@ -15,6 +16,7 @@ const perfilVacio = (user) => ({
 
 export const PerfilService = {
   obtener: async () => {
+    // Busca el perfil y si no existe, crea uno vacio para la UI.
     const user = await obtenerUsuario();
     if (!user) {
       return { ok: false, msg: 'Sesion no valida' };
@@ -47,6 +49,7 @@ export const PerfilService = {
   },
 
   guardar: async (perfil) => {
+    // Guarda los cambios del formulario en Supabase.
     const user = await obtenerUsuario();
     if (!user) {
       return { ok: false, msg: 'Sesion no valida' };

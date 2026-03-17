@@ -5,6 +5,7 @@ import Notificacion from '../componentes/Notificacion';
 import './Recetas.css';
 
 function Recetas() {
+  // Estados de lista, formulario y mensajes.
   const [recetas, setRecetas] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [guardandoReceta, setGuardandoReceta] = useState(false);
@@ -20,6 +21,7 @@ function Recetas() {
   const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
 
   useEffect(() => {
+    // Carga recetas al entrar en la pagina.
     const cargarRecetas = async () => {
       const res = await RecetasService.listar();
 
@@ -36,6 +38,7 @@ function Recetas() {
   }, []);
 
   const manejarArchivo = (e) => {
+    // Convierte la imagen a base64 para poder guardarla.
     const archivo = e.target.files[0];
     if (!archivo) return;
 
@@ -83,6 +86,7 @@ function Recetas() {
   };
 
   const confirmarBorrado = async () => {
+    // Borra la receta elegida en el modal.
     if (!recetaAEliminar) {
       return;
     }

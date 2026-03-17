@@ -5,6 +5,7 @@ import Notificacion from '../componentes/Notificacion';
 import './DetalleReceta.css';
 
 function DetalleReceta() {
+  // Toma el id de la receta desde la URL.
   const { id } = useParams();
   const idReceta = String(id);
 
@@ -34,6 +35,7 @@ function DetalleReceta() {
   }, [idReceta]);
 
   const manejarFavorito = async () => {
+    // Actualiza favorito en pantalla y luego en base de datos.
     const nuevoEstado = !esFavorito;
     setEsFavorito(nuevoEstado);
 

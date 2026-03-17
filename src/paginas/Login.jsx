@@ -5,6 +5,7 @@ import Notificacion from '../componentes/Notificacion';
 import './Auth.css';
 
 function Login({ setUsuario }) {
+  // Campos del formulario de acceso.
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [cargandoLogin, setCargandoLogin] = useState(false);
@@ -20,6 +21,7 @@ function Login({ setUsuario }) {
     }
 
     setCargandoLogin(true);
+    // Intenta iniciar sesion con Supabase.
     const res = await AuthService.login(email.trim(), password);
     setCargandoLogin(false);
 

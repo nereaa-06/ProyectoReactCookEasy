@@ -5,6 +5,7 @@ import Notificacion from '../componentes/Notificacion';
 import './Perfil.css';
 
 function Perfil() {
+  // Datos del perfil que se editan en el formulario.
   const [perfil, setPerfil] = useState({
     nombreUsuario: '',
     nombreCompleto: '',
@@ -19,6 +20,7 @@ function Perfil() {
   const [confirmandoEliminar, setConfirmandoEliminar] = useState(false);
 
   useEffect(() => {
+    // Trae el perfil al abrir la pagina.
     const cargarPerfil = async () => {
       const res = await PerfilService.obtener();
 
@@ -39,6 +41,7 @@ function Perfil() {
   };
 
   const cambiarFoto = (e) => {
+    // Convierte la foto a base64 para guardarla en Supabase.
     const archivo = e.target.files?.[0];
     if (!archivo) {
       return;
@@ -66,6 +69,7 @@ function Perfil() {
   };
 
   const confirmarEliminar = async () => {
+    // Elimina la cuenta y cierra sesion.
     const res = await AuthService.eliminarCuenta();
     
     if (res.ok) {

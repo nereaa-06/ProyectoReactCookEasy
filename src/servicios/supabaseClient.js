@@ -1,5 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 
+// Lee claves de entorno para conectar con Supabase.
 const url = import.meta.env.VITE_SUPABASE_URL;
 const claveAnon = import.meta.env.VITE_SUPABASE_ANON_KEY;
 

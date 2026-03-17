@@ -5,6 +5,7 @@ import Notificacion from '../componentes/Notificacion';
 import './Auth.css';
 
 function Register() {
+  // Datos del formulario de registro.
   const [nombre, setNombre] = useState('');
   const [nombreUsuario, setNombreUsuario] = useState('');
   const [email, setEmail] = useState('');
@@ -21,6 +22,7 @@ function Register() {
     }
 
     setCargandoRegistro(true);
+    // Crea la cuenta del nuevo usuario.
     const res = await AuthService.registrar({
       nombre: nombre.trim(),
       nombreUsuario: nombreUsuario.trim(),
@@ -41,6 +43,7 @@ function Register() {
   };
 
   const cerrarNoti = () => {
+    // Si se registro bien, envia al login.
     const mensaje = noti.mensaje.toLowerCase();
     setNoti({ abierta: false, titulo: '', mensaje: '' });
 

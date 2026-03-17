@@ -1,5 +1,6 @@
 import { supabase } from './supabaseClient';
 
+// Normaliza el nombre de usuario para que sea valido.
 const limpiarNombreUsuario = (texto) => {
   const base = String(texto || '').trim().toLowerCase();
   if (!base) {
@@ -23,6 +24,7 @@ const guardarPerfilBasico = async (user, nombre, nombreUsuario) => {
   });
 };
 
+// Deja solo los datos necesarios para la UI.
 const aUsuarioSimple = (user) => {
   if (!user) return null;
   const nombreSimple = user.user_metadata?.nombre_usuario || user.user_metadata?.nombre || 'Usuario';
@@ -35,6 +37,7 @@ const aUsuarioSimple = (user) => {
 
 export const AuthService = {
   registrar: async (datos) => {
+    // Crea usuario y su perfil basico.
     const nombre = String(datos?.nombre || '').trim();
     const nombreUsuario = limpiarNombreUsuario(datos?.nombreUsuario || nombre);
     const email = String(datos?.email || '').trim().toLowerCase();
@@ -70,6 +73,7 @@ export const AuthService = {
   },
 
   login: async (email, password) => {
+    // Inicia sesion con email y contrasena.
     const emailLimpio = String(email || '').trim().toLowerCase();
     const { data, error } = await supabase.auth.signInWithPassword({
       email: emailLimpio,
@@ -100,6 +104,7 @@ export const AuthService = {
   },
 
   eliminarCuenta: async () => {
+    // Llama al RPC que borra todo del usuario.
     try {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) {

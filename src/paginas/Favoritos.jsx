@@ -4,11 +4,13 @@ import Notificacion from '../componentes/Notificacion';
 import './Favoritos.css';
 
 function Favoritos() {
+  // Guarda las recetas marcadas como favoritas.
   const [favoritos, setFavoritos] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [notificacion, setNotificacion] = useState({ visible: false, titulo: '', mensaje: '' });
 
   useEffect(() => {
+    // Carga recetas y cruza con ids favoritos.
     const cargarFavoritos = async () => {
       setCargando(true);
       const res = await RecetasService.listar();
@@ -31,6 +33,7 @@ function Favoritos() {
   }, []);
 
   const quitarFavorito = async (recetaId) => {
+    // Quita la receta del estado y de la BD.
     const res = await RecetasService.actualizarFavorito(recetaId, false);
     
     if (res.ok) {

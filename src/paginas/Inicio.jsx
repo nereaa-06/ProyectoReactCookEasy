@@ -3,9 +3,11 @@ import './Inicio.css';
 
 function Inicio() {
   return (
+    // Seccion principal con fondo y texto de bienvenida.
     <div className="inicio-fondo">
       <div className="inicio-caja">
         <h1 className="inicio-titulo">Descubre recetas fáciles y deliciosas</h1>
+        
         
         <p className="inicio-texto">
           En CookEasy, creemos que cocinar debe ser una aventura placentera y accesible para todos. 

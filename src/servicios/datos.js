@@ -1,3 +1,4 @@
+// Recetas de ejemplo para primer uso de la app.
 export const recetasIniciales = [
   {
     id: '1',

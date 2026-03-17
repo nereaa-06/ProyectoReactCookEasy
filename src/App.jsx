@@ -11,6 +11,7 @@ import Register from './paginas/Register';
 import { AuthService } from './servicios/Auth';
 
 function App() {
+  // Guarda el usuario actual y el estado de carga inicial.
   const [usuario, setUsuario] = useState(null);
   const [cargando, setCargando] = useState(true);
 
@@ -45,6 +46,7 @@ function App() {
     return null;
   }
 
+  // Reglas simples para rutas privadas y publicas.
   const rutaPrivada = (componente) => (estaLogueado ? componente : <Navigate to="/login" replace />);
   const rutaPublica = (componente) => (estaLogueado ? <Navigate to="/" replace /> : componente);
 

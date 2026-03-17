@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Navegador.css';
 
 function Navegador({ alSalir, nombreUsuario }) {
+  // Controla si el menu lateral esta abierto.
   const [menu, setMenu] = useState(false);
   const nombre = nombreUsuario || 'Usuario';
   const cerrarMenu = () => setMenu(false);
@@ -29,6 +30,7 @@ function Navegador({ alSalir, nombreUsuario }) {
       </div>
 
       {menu && (
+        // Menu lateral para accesos rapidos.
         <div className="menu-lateral">
           <div className="perfil-resumen">
             <div className="circulo-user-naranja">👤</div>
