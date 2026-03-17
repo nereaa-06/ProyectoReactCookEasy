@@ -1,0 +1,39 @@
+.inicio-fondo {
+  background-image: url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.inicio-caja {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 50px;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.inicio-titulo {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.inicio-texto {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.inicio-final {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}

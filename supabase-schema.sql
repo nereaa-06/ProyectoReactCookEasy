@@ -41,7 +41,7 @@ create unique index if not exists idx_perfiles_nombre_usuario_unico
 on perfiles (lower(nombre_usuario))
 where nombre_usuario is not null and nombre_usuario <> '';
 
--- RLS
+-- Habilitar RLS que es la base de la seguridad en Supabase
 alter table recetas enable row level security;
 alter table favoritos enable row level security;
 alter table perfiles enable row level security;
